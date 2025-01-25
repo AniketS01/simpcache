@@ -61,5 +61,6 @@ func (c *Cache[K, V]) add(key K, value V, d time.Duration) error {
 		value:   value,
 		expires: int(exp),
 	}
+	c.mu.Unlock()
 	return nil
 }
