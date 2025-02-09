@@ -1,4 +1,4 @@
-package simpcache
+package yagcache
 
 import (
 	"errors"
