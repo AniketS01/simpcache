@@ -29,8 +29,6 @@ func TestCache(t *testing.T) {
 	}
 
 	tc.Set("a", 1, NoExpiration)
-	//tc.Set("b", "b", Defaultexpires)
-	//tc.Set("c", 3.5, Defaultexpires)
 
 	x, found := tc.Get("a")
 	if found != nil {
@@ -40,7 +38,6 @@ func TestCache(t *testing.T) {
 }
 
 func TestCacheTimes(t *testing.T) {
-	//var found bool
 
 	tc := New[string, int](50*time.Millisecond, 1*time.Millisecond)
 	tc.Set("a", 1, Defaultexpires)
